@@ -10,8 +10,9 @@ pip3 install -r requirements.txt
 deactivate
 
 pushd v-env/lib/python3.6/site-packages
-zip -r9 ${OLDPWD}/$1.zip .
-popd 
-zip -g $1.zip main.py
+zip -r9 "${OLDPWD}/$1.zip" .
 popd
-mv ./$1/$1.zip .
+ls
+zip -g ./$1.zip main.py
+popd
+mv ./$1/$1.zip ./$1.zip
